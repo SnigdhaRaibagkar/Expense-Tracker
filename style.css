@@ -1,0 +1,32 @@
+body {
+    font-family: Arial;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+} 
+
+.container {
+    background: white;
+    padding: 20px;
+    width: 350px;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+input, button {
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+}
+
+button {
+    background: rgb(29, 218, 236);
+    color:black;
+    border: none;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
