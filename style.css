@@ -1,37 +1,91 @@
 body {
     font-family: Arial;
-    background: #f4f4f4;
+    background:linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.9)),
+    url("https://images.unsplash.com/photo-1554224155-6726b3ff858f");
     display: flex;
     justify-content: center;
+    padding: 40px;
+    color:white;
+
+    background-size: cover;
+    background-position: center;
+    background-attachment:fixed;
 } 
 
 .container {
-    background: white;
+    background-color: #1e293b;
     padding: 20px;
-    width: 350px;
+    width: 700px;
     border-radius: 10px;
     margin-top: 50px;
 }
 
-input, button {
-    width: 100%;
-    margin: 5px 0;
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.balance-card{
+       text-align: center;
     padding: 10px;
+    border: 2px solid #00f5ff;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #00f5ff;
+    margin-bottom: 20px;
+}
+
+.form input {
+    width: 96%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: none;
+}
+.buttons{
+    display: flex;
+    gap: 10px;
 }
 
 button {
-    background: rgb(29, 218, 236);
-    color:black;
-    border: none;
+   flex: 1;
+   padding: 10px;
+   border:none;
+   border-radius: 8px;
+   cursor: pointer;
+}
+
+#incomeBtn {
+    background-color:#00ff9f;
+    color: black;
+   box-shadow:0 0 10px #00ff9f;
+}
+
+#expenseBtn {
+    background-color:#ff4d6d;
+    color: white;
+    box-shadow:0 0 10px #ff4d6d;
 }
 
 .delete {
-   background-color:rgb(251, 32, 32);
+   background-color:#ff4d6d;
     color: black;
+}
+
+ul{
+    list-style: none;
+    padding: 15px 10px;
+    margin-top: 15px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    position: relative;
 }
 
 li {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px 10px 35px ;
+    font-size: 14px;
+    color: #111827;
     margin: 5px 0;
 }

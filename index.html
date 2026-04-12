@@ -9,15 +9,21 @@
     <div class="container">
         <h1>Expense Tracker</h1>
 
-        <h3>Balance: ₹<span id="balance">0</span></h3>
+         <div class="balance-card">
+        <p>Current Balance</p>
+        <h2>₹<span id="balance">0</span></h2>
+    </div>
 
-        <!-- Inputs -->
-        <input type="text" id="text" placeholder="Enter description">
-        <input type="number" id="amount" placeholder="Enter amount">
 
-        <!-- Buttons -->
-        <button id="incomeBtn">+ Add Income</button>
-        <button id="expenseBtn">- Add Expense</button>
+       <div class="form">
+        <input type="text" id="text" placeholder="Description">
+        <input type="number" id="amount" placeholder="Amount">
+
+        <div class="buttons">
+            <button id="incomeBtn">+ Add Income</button>
+            <button id="expenseBtn">- Add Expense</button>
+        </div>
+    </div>
 
         <h3>History</h3>
         <ul id="list"> 
