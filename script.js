@@ -6,7 +6,8 @@ const balance = document.getElementById('balance');
 const incomeBtn = document.getElementById('incomeBtn');
 const expenseBtn = document.getElementById('expenseBtn');
 
-let transactions = [];
+//Load from local storage
+let transactions = JSON.parse(localStorage.getItem("transactions"))|| [];
 
 function addTransaction(type) {
     if (text.value === "" || amount.value === "") {
@@ -23,16 +24,28 @@ function addTransaction(type) {
     }
 
     const transaction = {
+        id: Date.now(),
         text: text.value,
         amount: amt
     };
 
     transactions.push(transaction);
-
+    
+    updateLocalStorage();
     render();
 
     text.value = "";
     amount.value = "";
+}
+
+function updateLocalStorage(){
+    localStorage.setItem("transactions", JSON.stringify(transactions));
+}
+
+function deleteTransaction(id) {
+    transactions = transactions.filter(t => t.id !== id);
+    updateLocalStorage();
+    render();
 }
 
 function render() {
@@ -45,9 +58,13 @@ function render() {
 
         const li = document.createElement('li');
 
-        li.innerHTML = `
-            ${t.text} 
-            <span>₹${Math.abs(t.amount)}</span>
+       li.innerHTML = `
+            <span class="text">${t.text}</span>
+
+            <div class="right">
+                <span class="amount">₹${Math.abs(t.amount)}</span>
+                <button class="delete" onclick="deleteTransaction(${t.id})">✕</button>
+            </div>
         `;
 
         list.appendChild(li);

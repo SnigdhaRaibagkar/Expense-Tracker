@@ -25,6 +25,11 @@ button {
     border: none;
 }
 
+.delete {
+   background-color:rgb(251, 32, 32);
+    color: black;
+}
+
 li {
     display: flex;
     justify-content: space-between;
