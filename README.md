@@ -14,10 +14,15 @@ A responsive expense tracker web app built with HTML, CSS, and JavaScript featur
 - JavaScript  
 
 # 📂 Project Structure
-index.html  
-style.css  
-script.js  
+expense-tracker/
+│── index.html
+│── style.css
+│── script.js
+│── README.md 
 
+# ✨ Enhancements
+- Fixed minor bugs and improved stability  
+- Added button animations for better user interaction  
 
 # ▶️ How to Run
 1. Download or clone the repository  

@@ -10,10 +10,16 @@ const expenseBtn = document.getElementById('expenseBtn');
 let transactions = JSON.parse(localStorage.getItem("transactions"))|| [];
 
 function addTransaction(type) {
-    if (text.value === "" || amount.value === "") {
+    if (text.value.trim() === "" || amount.value === "") {
         alert("Please enter both description and amount");
         return;
     }
+
+    const amtValue=parseFloat(amount.value);
+    if (isNaN(amtValue) || amtValue <= 0) {
+  alert("Please enter a valid amount");
+  return;   
+}
 
     let amt = Number(amount.value);
 

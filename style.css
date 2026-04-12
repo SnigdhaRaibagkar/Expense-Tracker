@@ -60,15 +60,38 @@ button {
    box-shadow:0 0 10px #00ff9f;
 }
 
+#incomeBtn:hover{
+    transform: scale(1.01);
+}
+
 #expenseBtn {
     background-color:#ff4d6d;
     color: white;
     box-shadow:0 0 10px #ff4d6d;
 }
 
+#expenseBtn:hover{
+    transform: scale(1.01);
+}
+
 .delete {
-   background-color:#ff4d6d;
-    color: black;
+    background: black;
+    font-size:10px;
+    width: 18px;
+    height: 18px;
+    display:flex;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding:0;
+    border-radius: 50%;
+    align-items: center;
+    justify-content:center;
+}
+
+button.delete:hover{
+
+    background-color: #ff4d6d;
 }
 
 ul{
@@ -88,4 +111,6 @@ li {
     font-size: 14px;
     color: #111827;
     margin: 5px 0;
+    border-left: solid 4px #111827;
+    border-bottom: solid 1px black;
 }
