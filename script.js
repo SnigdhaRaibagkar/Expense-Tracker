@@ -2,6 +2,8 @@ const text = document.getElementById('text');
 const amount = document.getElementById('amount');
 const list = document.getElementById('list');
 const balance = document.getElementById('balance');
+const Income= document.getElementById('income');
+const Expense= document.getElementById('expense');
 
 const incomeBtn = document.getElementById('incomeBtn');
 const expenseBtn = document.getElementById('expenseBtn');
@@ -58,11 +60,20 @@ function render() {
     list.innerHTML = "";
 
     let total = 0;
+    let income= 0;
+    let expense=0;
 
     transactions.forEach(t => {
         total += t.amount;
 
+         if (t.amount > 0) {
+            income += t.amount;
+        } else {
+            expense += t.amount;
+        }
+
         const li = document.createElement('li');
+        li.classList.add(t.amount > 0 ? 'income' : 'expense');
 
        li.innerHTML = `
             <span class="text">${t.text}</span>
@@ -77,6 +88,8 @@ function render() {
     });
 
     balance.innerText = total;
+    Income.innerText= income;
+    Expense.innerText= expense;
 }
 
 incomeBtn.addEventListener('click', () => {
