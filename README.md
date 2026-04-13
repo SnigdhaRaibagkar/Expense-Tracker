@@ -2,11 +2,12 @@
 A responsive expense tracker web app built with HTML, CSS, and JavaScript featuring real-time balance updates.
 
 # 🚀 Features
-- Add income and expense transactions  
+- Add income and expense transactions
+- Organized transactions using dedicated income and expense sections  
 - View transaction history  
 - Real-time balance calculation  
--Delete transactions
--Data persistence using Local Storage
+- Delete transactions
+- Data persistence using Local Storage
 
 # 🛠️ Tech Stack
 - HTML  
@@ -23,6 +24,7 @@ expense-tracker/
 # ✨ Enhancements
 - Fixed minor bugs and improved stability  
 - Added button animations for better user interaction  
+- Improved UI with notebook-style design
 
 # ▶️ How to Run
 1. Download or clone the repository  
