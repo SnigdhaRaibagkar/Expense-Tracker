@@ -7,6 +7,7 @@ const Expense= document.getElementById('expense');
 
 const incomeBtn = document.getElementById('incomeBtn');
 const expenseBtn = document.getElementById('expenseBtn');
+const filter=document.getElementById('filter');
 
 //Load from local storage
 let transactions = JSON.parse(localStorage.getItem("transactions"))|| [];
@@ -63,7 +64,13 @@ function render() {
     let income= 0;
     let expense=0;
 
-    transactions.forEach(t => {
+     let filtered = transactions.filter(t => {
+        if (filter.value === "income") return t.amount > 0;
+        if (filter.value === "expense") return t.amount < 0;
+        return true;
+    });
+
+    filtered.forEach(t => {
         total += t.amount;
 
          if (t.amount > 0) {
@@ -99,5 +106,7 @@ incomeBtn.addEventListener('click', () => {
 expenseBtn.addEventListener('click', () => {
     addTransaction("expense");
 });
+
+filter.addEventListener('change', render);
 
 render();

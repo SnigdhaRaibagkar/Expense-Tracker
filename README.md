@@ -6,6 +6,7 @@ A responsive expense tracker web app built with HTML, CSS, and JavaScript featur
 - Organized transactions using dedicated income and expense sections  
 - View transaction history  
 - Real-time balance calculation  
+- Filter transactions (All / Income / Expense) 
 - Delete transactions
 - Data persistence using Local Storage
 
