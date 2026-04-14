@@ -29,6 +29,9 @@ expense-tracker/
 - Improved UI with notebook-style design
 - Implemented rolling number animation for balance, income, and expense
 - Provides smooth and dynamic visual feedback on value changes
+- Added confirmation dialog before deleting all transactions
+- Prevents accidental data loss
+- Improves reliability and user control
 - Enhances overall user experience and interactivity
 
 # ▶️ How to Run

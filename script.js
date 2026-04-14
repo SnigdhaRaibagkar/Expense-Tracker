@@ -149,9 +149,11 @@ expenseBtn.addEventListener('click', () => {
 filter.addEventListener('change', render);
 
 clearBtn.addEventListener('click', ()=>{
+     if (confirm("Are you sure you want to clear all history?")) { 
      transactions=[];
      localStorage.removeItem("transactions");
      render();
+     }
 });
 
 render();
