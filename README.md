@@ -26,6 +26,9 @@ expense-tracker/
 - Fixed minor bugs and improved stability  
 - Added button animations for better user interaction  
 - Improved UI with notebook-style design
+- Implemented rolling number animation for balance, income, and expense
+- Provides smooth and dynamic visual feedback on value changes
+- Enhances overall user experience and interactivity
 
 # ▶️ How to Run
 1. Download or clone the repository  
