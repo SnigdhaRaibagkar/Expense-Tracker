@@ -1,6 +1,9 @@
 # Expense-Tracker
 A responsive expense tracker web app built with HTML, CSS, and JavaScript featuring real-time balance updates.
 
+# 🌐 Live Demo: 
+https://snigdharaibagkar.github.io/Expense-Tracker/
+
 # 🚀 Features
 - Add income and expense transactions
 - Organized transactions using dedicated income and expense sections  
