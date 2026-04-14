@@ -9,6 +9,7 @@ A responsive expense tracker web app built with HTML, CSS, and JavaScript featur
 - Filter transactions (All / Income / Expense) 
 - Delete transactions
 - Data persistence using Local Storage
+- Clear entire transaction history with a single click
 
 # 🛠️ Tech Stack
 - HTML  

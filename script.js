@@ -8,6 +8,7 @@ const Expense= document.getElementById('expense');
 const incomeBtn = document.getElementById('incomeBtn');
 const expenseBtn = document.getElementById('expenseBtn');
 const filter=document.getElementById('filter');
+const clearBtn=document.getElementById('clearBtn');
 
 //Load from local storage
 let transactions = JSON.parse(localStorage.getItem("transactions"))|| [];
@@ -146,5 +147,11 @@ expenseBtn.addEventListener('click', () => {
 });
 
 filter.addEventListener('change', render);
+
+clearBtn.addEventListener('click', ()=>{
+     transactions=[];
+     localStorage.removeItem("transactions");
+     render();
+});
 
 render();

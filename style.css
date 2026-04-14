@@ -196,4 +196,26 @@ li:first-child{
     align-items: center;
     gap: 8px;
 }
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+#clearBtn {
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: auto;             
+    flex: 0 0 auto;         
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+#clearBtn:hover {
+    background-color: #f0244a;
+    color: black;
+    box-shadow: black 0px 0px 10px;
+}
