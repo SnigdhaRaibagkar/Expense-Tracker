@@ -10,6 +10,7 @@ A responsive expense tracker web app built with HTML, CSS, and JavaScript featur
 - Delete transactions
 - Data persistence using Local Storage
 - Clear entire transaction history with a single click
+- Date tracking for each transaction
 
 # 🛠️ Tech Stack
 - HTML  
@@ -32,6 +33,7 @@ expense-tracker/
 - Added confirmation dialog before deleting all transactions
 - Prevents accidental data loss
 - Improves reliability and user control
+- Enhanced readability with formatted date display
 - Enhances overall user experience and interactivity
 
 # ▶️ How to Run

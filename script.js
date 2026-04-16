@@ -9,6 +9,7 @@ const incomeBtn = document.getElementById('incomeBtn');
 const expenseBtn = document.getElementById('expenseBtn');
 const filter=document.getElementById('filter');
 const clearBtn=document.getElementById('clearBtn');
+const date=document.getElementById('date');
 
 //Load from local storage
 let transactions = JSON.parse(localStorage.getItem("transactions"))|| [];
@@ -37,10 +38,13 @@ function addTransaction(type) {
         amt = Math.abs(amt);
     }
 
+    const dateValue= date? date.value: "";
     const transaction = {
         id: Date.now(),
         text: text.value,
-        amount: amt
+        amount: amt,
+        type: type,
+        date: dateValue || new Date().toISOString()
     };
 
     transactions.push(transaction);
@@ -87,9 +91,14 @@ function render() {
         const li = document.createElement('li');
         li.classList.add(t.amount > 0 ? 'income' : 'expense');
 
+        const formattedDate= new Date(t.date).toLocaleDateString("en-IN", {
+            weekday: "short",
+            day: "numeric",
+            month:"short"
+        });
        li.innerHTML = `
             <span class="text">${t.text}</span>
-
+            <small>${formattedDate}</small>
             <div class="right">
                 <span class="amount">₹${Math.abs(t.amount)}</span>
                 <button class="delete" onclick="deleteTransaction(${t.id})">✕</button>
